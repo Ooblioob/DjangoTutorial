@@ -1,0 +1,16 @@
+{% extends 'rango/base.html' %}
+{% block title %}{{ category_name }}{% endblock %}
+{% block body_block %}
+{% load static %}
+	<head>
+		<title>Rango</title>
+	</head>
+	<div class="hero-unit">
+		<h1>About Rango</h1>
+		Second Page! <strong>{{ boldmessage }}</strong>.<br />
+		You've visited the site on <strong>{{ visit_count }} occasion(s)</strong>.<br />
+		<a href="/rango/">Home Page</a><br />
+		<img src="{% static "secondrango.jpg" %}" alt="Picture of Rango" />
+	</div>
+	
+{% endblock %}
