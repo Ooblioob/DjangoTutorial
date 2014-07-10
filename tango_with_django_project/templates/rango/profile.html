@@ -5,12 +5,18 @@
 	<h1> Profile <h1> <br/>
 	<h2>{{ user.username }}</h2>
 	<p>Email: {{ user.email }}</p>
+	
 	{% if userprofile %}
 		<p>Website: <a href="{{ userprofile.website }}">{{ userprofile.website }}</a></p>
 		<br/>
 		{% if userprofile.picture %}
 			<img src="{{ userprofile.picture.url }}" />
 		{% endif %}
+	{% else %}
+	<div>
+		<img src="http://thecatapi.com/api/images/get?format=src&type=jpg&size=small" alt="a random cat picture"></img>
+		<h6><small>(Visual Approximation)</small></h6>
+	</div>	
 	{% endif %}
 </div>
 {% endblock %}
